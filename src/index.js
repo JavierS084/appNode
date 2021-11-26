@@ -1,23 +1,28 @@
 const express = require ('express');
-const app = express();
 const path = require('path');
-const exphbs = require('express-handlebars');
+
+const { engine } = require('express-handlebars');
+
 const methodOverride = require('method-override');
 const  session = require('express-session');
+
+//Initialization
+const app = express();
+
 //Settings
 
-app.set('port', process.env.PORT || 3000)
+app.set('port', process.env.PORT || 3000);
 
 app.set('views', path.join(__dirname, 'wiews'));
 
-app.engine('.hbs', exphbs ({
+app.engine('.hbs', engine ({
 
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
-    partialsDir: path.join(app.get('views', 'partials')),
+    partialsDir: path.join(app.get('views'), 'partials'),
     extname: '.hbs'
-
-}));
+ 
+ }));
 
 app.set('view engine', '.hbs');
 
@@ -36,7 +41,7 @@ app.use(session({
 
 
 // routes
-app.use(require('.routes/index'));
+app.use(require('./routes/index'));
 app.use(require('./routes/users'));
 app.use(require('./routes/notes'));
 
