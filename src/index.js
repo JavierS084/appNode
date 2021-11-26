@@ -8,6 +8,7 @@ const  session = require('express-session');
 
 //Initialization
 const app = express();
+require('./database');
 
 //Settings
 
@@ -47,9 +48,11 @@ app.use(require('./routes/notes'));
 
 
 
-//static files
+//Static Files
 
-//server is listenning
+app.use(express.static(path.join(__dirname, 'public')));
+
+//Server is listenning
 app.listen (app.get('port'), () => {
-    console.log('server on port ', app.get('port'));
+    console.log('Server on Port ', app.get('port'));
 });
