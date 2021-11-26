@@ -4,7 +4,7 @@ const path = require('path');
 const exphbs = require('express-handlebars');
 const methodOverride = require('method-override');
 const  session = require('express-session');
-//settings
+//Settings
 
 app.set('port', process.env.PORT || 3000)
 
@@ -14,12 +14,12 @@ app.engine('.hbs', exphbs ({
 
     defaultLayout: 'main',
     layoutsDir: path.join(app.get('views'), 'layouts'),
-    partialDir: path.join(app.get('views', 'partials')),
-    exrname: '.hbs'
+    partialsDir: path.join(app.get('views', 'partials')),
+    extname: '.hbs'
 
 }));
 
-app.search('view engine', 'hbs');
+app.set('view engine', '.hbs');
 
 
 //Middlewares
@@ -37,8 +37,8 @@ app.use(session({
 
 // routes
 app.use(require('.routes/index'));
-app.use(require('./routes/users'))
-app.use(require('./routes/notes'))
+app.use(require('./routes/users'));
+app.use(require('./routes/notes'));
 
 
 
