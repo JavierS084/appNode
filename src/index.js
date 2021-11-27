@@ -7,6 +7,7 @@ const methodOverride = require('method-override');
 const  session = require('express-session');
 
 //Initialization
+
 const app = express();
 require('./database');
 
@@ -14,14 +15,15 @@ require('./database');
 
 app.set('port', process.env.PORT || 3000);
 
-app.set('views', path.join(__dirname, 'wiews'));
+app.set('views', path.join(__dirname, 'views'));
 
 app.engine('.hbs', engine ({
 
     defaultLayout: 'main',
+    extname: '.hbs',
     layoutsDir: path.join(app.get('views'), 'layouts'),
-    partialsDir: path.join(app.get('views'), 'partials'),
-    extname: '.hbs'
+    partialsDir: path.join(app.get('views'), 'partials')
+    
  
  }));
 
@@ -32,6 +34,7 @@ app.set('view engine', '.hbs');
 
 app.use(express.urlencoded({extended: false}));
 app.use(methodOverride('_method'));
+
 app.use(session({
     secret: 'mysecretapp',
     resave: true,
@@ -41,7 +44,7 @@ app.use(session({
 //global variables
 
 
-// routes
+// Routes
 app.use(require('./routes/index'));
 app.use(require('./routes/users'));
 app.use(require('./routes/notes'));
