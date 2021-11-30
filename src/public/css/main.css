@@ -21,3 +21,28 @@ body {
 .formP {
     padding: 10px;
 }
+
+.navbar-brand {
+    padding-top: 0.3125rem;
+    padding-bottom: 0.3125rem;
+    margin-right: 1rem;
+    font-size: 1.25rem;
+    margin-left: 20px;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.navbar .nav-item:not(:last-child) {
+    margin-right: 35px;
+  }
+   
+.dropdown-toggle::after {
+     transition: transform 0.15s linear; 
+  }
+   
+.show.dropdown .dropdown-toggle::after {
+    transform: translateY(3px);
+  }
+.containerxc {
+    margin-top: 20px;
+    }

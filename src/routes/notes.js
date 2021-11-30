@@ -6,7 +6,7 @@ router.get('/notes/add', (req, res) => {
     res.render('notes/new-note');
 });
 
-router.post('/notes/new-note', (req, res) => {
+router.post('/notes/new-note', async (req, res) => {
     const { title, description } = req.body;
     const errors = [];
     if(!title) {
@@ -28,16 +28,18 @@ router.post('/notes/new-note', (req, res) => {
         });
     } else {
         const newNote = new Note({ title, description});
-        console.log(newNote);
-        res.send('Ok');
+        await newNote.save();
+        res.redirect('/notes');
     }
     
    
 });
 
-router.get('/notes', (req, res) => {
-    res.render('');
-});
+router.get('/notes', async (req, res) => {
+    const notes = await Note.find().lean();
+    res.render('notes/all-notes', { notes });
 
+
+});
 
 module.exports = router;
