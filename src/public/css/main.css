@@ -1,10 +1,16 @@
 body {
-    background: #1c92d2;  /* fallback for old browsers */
+   
     background: -webkit-linear-gradient(to right, #f2fcfe, #1c92d2);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #f2fcfe, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    
 
 }
+
+
+.navbar{
+    background-color: cornflowerblue;
+}
+
+
 
 .btn {
     background-color: dodgerblue;
@@ -20,6 +26,7 @@ body {
 
 .formP {
     padding: 10px;
+    padding-top: 70px;
 }
 
 .navbar-brand {
@@ -45,4 +52,18 @@ body {
   }
 .containerxc {
     margin-top: 20px;
-    }
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: column;
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-left: 70%;
+    list-style: none;
+}
+
+.bg-light {
+    --bs-bg-opacity: 1;
+    
+}
