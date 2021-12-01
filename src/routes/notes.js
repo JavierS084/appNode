@@ -31,7 +31,6 @@ router.post('/notes/new-note', async (req, res) => {
         await newNote.save();
         res.redirect('/notes');
     }
-    
    
 });
 
