@@ -45,4 +45,10 @@ router.get('/notes/edit/:id', async (req, res) => {
     res.render('notes/edit-note', {note})
 });
 
+router.put('/notes/edit-note/:id',async (req, res) => {
+    const {title, description }= req.body;
+    await Note.findByIdAndUpdate(req.params.id, { title, description});
+    res.redirect('/notes');
+})
+
 module.exports = router;
