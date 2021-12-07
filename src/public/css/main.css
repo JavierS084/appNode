@@ -5,13 +5,49 @@ body {
 
 }
 
+.btn-outline-signin{
+    border-color: green;
+    color: green;
+    text-align: justify;
+}
+
+.btn-outline-signin:hover {
+    color: #000;
+    background-color: green;
+    border-color: green;
+    text-align: justify;
+}
+
+
+.btn-outline-signup{
+
+    border-color: yellow;
+    color: yellow;
+    text-align: justify;
+
+}
+
+.btn-outline-signup:hover{
+
+    border-color: yellow;
+    color: #000;
+    background-color: yellow;
+    text-align: justify;
+}
+
 
 .navbar{
     background-color: cornflowerblue;
 }
+.plus-circle{
+    padding-top: 35%;
+    padding-left: 95%;
+}
 
-
-
+.fa-plus-circle{
+    
+    color: whitesmoke;
+}
 .btn-primary {
     background-color: dodgerblue;
 }
@@ -59,7 +95,7 @@ body {
     flex-direction: column;
     padding-left: 0;
     margin-bottom: 0;
-    margin-left: 88%;
+    margin-left: 78%;
     list-style: none;
 }
 .navbar-light .navbar-nav .nav-link {
