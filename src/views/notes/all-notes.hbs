@@ -9,14 +9,15 @@
                     </h4>
                         
                     <p>
-                    {{description}}
+                        {{description}}
                     </p>
 
-                   <div class="d-grid gap-2">
-
-                        <button class="btn btn-outline-danger" type="button">Delete</button>
-                        
-                    </div>
+                    <form action="/notes/delete/{{_id}}?_method=DELETE" method="POST">
+                        <input type="hidden" name="_method" value="DELETE">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-outline-danger" type="submit">Delete</button>
+                        </div>
+                    </form>
 
                 </div>
             </div>
@@ -37,9 +38,6 @@
 
             </div>
         </div>
-
-
-
         
     {{/each}}
 </div>
