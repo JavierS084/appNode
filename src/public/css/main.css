@@ -4,7 +4,13 @@ body {
     background: linear-gradient(to right, #000000, #1c92d2); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
 }
-
+footer{
+    margin-top: 9rem;
+}
+.img-ico{
+    width: 2.2rem;
+    height: 2.2rem;
+}
 .btn-outline-signin{
     border-color: green;
     color: green;
