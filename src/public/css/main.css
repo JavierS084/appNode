@@ -93,6 +93,7 @@ footer{
 }
 .btn-primary {
     background-color: dodgerblue;
+    border-color: #fff;
 }
 
 .form-group {

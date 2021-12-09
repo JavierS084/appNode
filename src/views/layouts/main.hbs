@@ -15,6 +15,8 @@
 
     <!--Custom css-->
     <link  type="text/css" rel="stylesheet" href="/css/main.css">
+    <!--Icon de tab -->
+    <link rel="shortcut icon" href="/images/ico.png"> 
   
 </head>
 <body>
@@ -50,9 +52,11 @@
     </div>
   </div>
 </nav>
+
 <div class="containerxc"> 
     <main class="container-fluid">
-        {{>messages}}
+        {{> messages }}
+        {{> errors }}
        {{{ body }}}
 
     </main>
@@ -178,8 +182,7 @@
 
   <!-- Copyright -->
   <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
-    © 2021 Copyright:
-    <a class="text-reset fw-bold" href="#">Javier S&aacute;nchez</a>
+    <p>Copyright &copy; <script>document.write(new Date().getFullYear())</script> Javier S&aacute;nchez. Todos los derechos reservados.</p>
   </div>
   <!-- Copyright -->
 </footer>
