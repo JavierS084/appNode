@@ -24,7 +24,7 @@ UserSchema.method('encryptPassword', async function(password){
 
 })
 
-UserSchema.method('validPassword', async function(password) {
+UserSchema.method('matchPassword', async function(password) {
     return await bcrypt.compareSync(password, this.password);
 });
 

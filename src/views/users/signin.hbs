@@ -1,44 +1,29 @@
-  <div class="container-login">
-  
-    <div class="col-md-3 mx-auto">
 
-      <div class="card">
-        <div class="card-body">
-          
-          <div class="ico-user">
-
-          </div>
-              <div class="form-group">
-                <h4 class=" d-flex justify-content-center ">Acceder</h4>  
-              
-              </div>
-          
-              <div class="form-group">
-                <input type="text" id="login" class="form-control" name="login" placeholder="login">
-              </div>
-              <div class="form-group">
-
-                <input type="text" id="password" class="form-control" name="login" placeholder="password">
-              </div>
-              <div class="form-group">
-                <div class="d-grid gap-2">
-
-                    <button class="btn btn-primary" type="submit">Acceder</button>
-                </div>
-              </div>
-          
-          </form>
-
-          <!-- Remind Passowrd -->
-          <div id="formFooter">
-            <a class="underlineHover" href="#">Forgot Password?</a>
-          </div>
-        </div>
+<div class="row">
+  <div class="col-md-3 mx-auto">
+    <div class="card mt-4 text-center">
+      <div class="card-header">
+          <h4> Acceder </h4>
       </div>
+      <img class="logo-signin mx-auto d-block" src="/images/ico.png" alt="Logo">
+      <div class="card-body">
+        <form action="/users/signin" method="POST">
+            <div class="form-group">
+              
+              <input type="email" class="form-control" name="email"  placeholder="Email">
+            </div>
+            <div class="form-group">
+              
+              <input type="password" class="form-control" name="password" id="" placeholder="Password">
+            </div>
+            <div class="form-group">
+              <div class="d-grid gap-2">
+                <button type="submit" class="btn btn-primary btn-block">Ingresar</button>
+              </div>
+            </div>
+        </form>
 
+      </div>
     </div>
+  </div>
 </div>
-    
-
-
-   
