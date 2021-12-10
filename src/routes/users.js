@@ -12,9 +12,20 @@ router.get('/users/signin', (req, res) => {
 router.post('/users/signin', passport.authenticate('local', {
     successRedirect: '/notes',
     failureRedirect: '/users/signin',
-    failureflash: true
+    failureFlash: true
 
 }));
+
+//route for error page
+router.get("/error", function(req, res, next) {
+res.render("error", {
+    error: req.flash("error"),
+});
+});
+
+
+
+
 
 
 router.get('/users/signup', (req, res) => {
