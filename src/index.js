@@ -9,6 +9,8 @@ const flash = require ('connect-flash');
 const passport = require('passport')
 
 
+
+
 //Initialization
 
 const app = express();
@@ -49,6 +51,7 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(flash());
+
 
 //global variables
 
