@@ -23,6 +23,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.15.4",
+    "@handlebars/allow-prototype-access": "^1.0.5",
     "bootstrap": "^5.1.3"
   }
 }
