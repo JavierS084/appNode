@@ -25,7 +25,7 @@ app.set('port', process.env.PORT || 3000);
 
 app.set('views', path.join(__dirname, 'views'));
 
-app.engine('.hbs', engine ({
+app.engine('.hbs', engine({
 
     defaultLayout: 'main',
     extname: '.hbs',
@@ -42,7 +42,7 @@ app.set('view engine', '.hbs');
 //Middlewares
 
 app.use(express.urlencoded({extended: false}));
-app.use(methodOverride('_method'));
+app.use(methodOverride('_method')); //sirve para que los formularios puedan enviar otros tipos metodos como put delete
 
 app.use(session({
     secret: 'mysecretapp',
