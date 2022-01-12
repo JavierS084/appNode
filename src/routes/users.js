@@ -16,14 +16,17 @@ router.post('/users/signin', passport.authenticate('local', {
 
 }));
 
+router.get('/users/logout', (req, res) => {
+    req.logOut();
+    res.redirect('/');
+})
+
 //route for error page
 router.get("/error", function(req, res, next) {
 res.render("error", {
     error: req.flash("error"),
 });
 });
- 
-
 
 router.get('/users/signup', (req, res) => {
     res.render('users/signup');
