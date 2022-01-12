@@ -22,10 +22,7 @@ res.render("error", {
     error: req.flash("error"),
 });
 });
-
-
-
-
+ 
 
 
 router.get('/users/signup', (req, res) => {
